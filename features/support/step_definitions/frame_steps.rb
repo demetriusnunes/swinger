@@ -3,7 +3,7 @@ import org.netbeans.jemmy.operators.JInternalFrameOperator
 
 def frame(name, internal)
   if internal 
-    raise "Internal frame container not set" unless @container
+    check_container "Internal frame"
     JInternalFrameOperator.new(@container, name)
   else
     JFrameOperator.new(name)

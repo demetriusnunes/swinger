@@ -1,9 +1,13 @@
 import org.netbeans.jemmy.operators.JToggleButtonOperator
 
 def togglebutton(button)
-  raise "Toolbar button container not set" unless @container
-  id = button[0,1] == "#" ? button[1..-1].to_i : button
+  check_container "Toolbar button"
+  id = string_or_numeric_id(button)
   JToggleButtonOperator.new(@container, id)
+end
+
+Given /^the toolbar button "([^\"]*)" is selected$/ do |button|
+  togglebutton(button).do_click
 end
 
 When /^I click the toolbar button "([^\"]*)"$/ do |button|
