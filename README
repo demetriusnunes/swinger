@@ -1,0 +1,17 @@
+= Swinger =
+ 
+This is a little project to facilitate writing acceptance tests for Java/Swing applications using Cucumber and JRuby.
+
+I am using the Jemmy Netbeans library to handle component finding.
+
+As a target application I am using the SwingSet2 demo application.
+
+Take a look at features/support/step_definitions for the steps available so far.
+
+Here is an acceptance test example using these steps:
+
+  Scenario: Button clicking
+    Given the frame "SwingSet2" is a container
+    And the toolbar button "#1" is selected
+    And the tab "Button Demo" is a container
+    When I click the button "One"
