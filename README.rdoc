@@ -1,4 +1,4 @@
-= Swinger =
+= Swinger
  
 This is a little project to facilitate writing acceptance tests for Java/Swing applications using Cucumber and JRuby.
 
