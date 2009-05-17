@@ -2,9 +2,9 @@
  
 This is a little project to facilitate writing acceptance tests for Java/Swing applications using Cucumber and JRuby.
 
-I am using the Jemmy Netbeans library to handle component finding.
+I am using the Jemmy Netbeans library for driving the application.
 
-As a target application I am using the SwingSet2 demo application.
+As a target application I am using the SwingSet2 demo.
 
 Take a look at features/support/step_definitions for the steps available so far.
 
