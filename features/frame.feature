@@ -7,6 +7,7 @@ Feature: Frame locators and events
     
   Scenario Outline: Internal frame activation
     Given the frame "SwingSet2" is a container
+    And the toolbar button "#0" is selected
     And the internal frame "<frame>" is visible
     When I activate the internal frame "<frame>"
     Then the internal frame "<frame>" should be active
