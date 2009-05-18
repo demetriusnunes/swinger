@@ -16,36 +16,36 @@ Here is an acceptance test example using these steps:
     And the tab "Button Demo" is a container
     When I click the button "One"
 
-== Running ==
+== Running
 
 To run all features, just type:
 
  jruby -S cucumber features
  
-== Requirements ==
+== Requirements
 
- * Latest JRuby version (I'm running from 1.3 source)
- * Latest Cucumber (0.3.6)
- * Java 1.5 or above
+* Latest JRuby version (I'm running from 1.3 source)
+* Latest Cucumber (0.3.6)
+* Java 1.5 or above
 
-== DONE ==
+== DONE
 
- * Frames
- * Buttons
- * Tabbed Panes
- * Toolbar Buttons
- * Menus
+* Frames
+* Buttons
+* Tabbed Panes
+* Toolbar Buttons
+* Menus
  
-== TO DO ==
+== TO DO
 
- * Dialogs
- * File Choosers
- * Radio buttons
- * Check boxes
- * Comboboxes
- * Lists
- * Progress bars
- * Sliders
- * Tables
- * Trees
+* Dialogs
+* File Choosers
+* Radio buttons
+* Check boxes
+* Comboboxes
+* Lists
+* Progress bars
+* Sliders
+* Tables
+* Trees
  
