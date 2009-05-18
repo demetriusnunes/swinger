@@ -19,6 +19,7 @@ Given /^the frame "([^\"]*)" is a container$/ do |name|
 end
 
 When /^I activate the (internal )*frame "([^\"]*)"$/ do |internal, name|
+  # not so safe, but JInternalFrameDriver#activate is broken on the Mac
   frame(name, internal).click_mouse
 end
 
