@@ -1,12 +1,12 @@
 Feature: Frame locators and events
 
   Scenario: Frame activation
-    Given the frame "SwingSet2" is visible
-    When I activate the frame "SwingSet2"
-    Then the frame "SwingSet2" should be active
+    Given the frame "SwingSet" is visible
+    When I activate the frame "SwingSet"
+    Then the frame "SwingSet" should be active
     
   Scenario Outline: Internal frame activation
-    Given the frame "SwingSet2" is a container
+    Given the frame "SwingSet" is a container
     And the toolbar button "#0" is selected
     And the internal frame "<frame>" is visible
     When I activate the internal frame "<frame>"

@@ -11,7 +11,7 @@ Take a look at features/support/step_definitions for the steps available so far.
 Here is an acceptance test example using these steps:
 
   Scenario: Button clicking
-    Given the frame "SwingSet2" is a container
+    Given the frame "SwingSet" is a container
     And the toolbar button "#1" is selected
     And the tab "Button Demo" is a container
     When I click the button "One"

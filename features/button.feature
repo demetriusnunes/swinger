@@ -1,7 +1,7 @@
 Feature: Buttons locators and events
 
   Scenario: Button clicking
-    Given the frame "SwingSet2" is a container
+    Given the frame "SwingSet" is a container
     And the toolbar button "#1" is selected
     And the tab "Button Demo" is a container
     When I click the button "One"
@@ -9,7 +9,7 @@ Feature: Buttons locators and events
     When I click the button "Three!"
   
   Scenario Outline: Button clicking with index
-    Given the frame "SwingSet2" is a container
+    Given the frame "SwingSet" is a container
     And the toolbar button "#1" is selected
     And the tab "Button Demo" is a container
     When I click the button "#<button>"

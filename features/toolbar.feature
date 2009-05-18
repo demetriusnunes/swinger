@@ -1,7 +1,7 @@
 Feature: Toolbar button locators and events
 
   Scenario Outline: Toolbar button click
-    Given the frame "SwingSet2" is a container
+    Given the frame "SwingSet" is a container
     When I click the toolbar button "#<button>"
     Then the toolbar button "#<button>" should be selected
   Examples:

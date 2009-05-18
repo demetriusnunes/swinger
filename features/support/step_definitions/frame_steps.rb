@@ -19,7 +19,7 @@ Given /^the frame "([^\"]*)" is a container$/ do |name|
 end
 
 When /^I activate the (internal )*frame "([^\"]*)"$/ do |internal, name|
-  frame(name, internal).activate
+  frame(name, internal).click_mouse
 end
 
 Then /^the (internal )*frame "([^\"]*)" should be active$/ do |internal, name|
