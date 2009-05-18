@@ -34,10 +34,10 @@ To run all features, just type:
  * Buttons
  * Tabbed Panes
  * Toolbar Buttons
+ * Menus
  
 == TO DO ==
 
- * Menus
  * Dialogs
  * File Choosers
  * Radio buttons
