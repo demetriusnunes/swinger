@@ -22,3 +22,8 @@ Feature: Toolbar button locators and events
     | 13 |
     | 14 |
     | 15 |    
+    
+  Scenario: Toolbar button click by tooltip
+    Given the frame "SwingSet" is a container
+    When I click the toolbar button "JList demo"
+    Then the toolbar button "JList demo" should be selected

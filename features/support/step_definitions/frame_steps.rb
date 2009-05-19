@@ -1,7 +1,7 @@
 import org.netbeans.jemmy.operators.JFrameOperator
 import org.netbeans.jemmy.operators.JInternalFrameOperator
 
-def frame(name, internal)
+def frame(name, internal = nil)
   if internal 
     check_container "Internal frame"
     JInternalFrameOperator.new(@container, name)
