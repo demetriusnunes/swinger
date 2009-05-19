@@ -1,4 +1,4 @@
-Funcionalidade: Buttons locators and events
+Feature: Buttons locators and events
 
   Scenario: Button clicking
     Given the frame "SwingSet" is a container
