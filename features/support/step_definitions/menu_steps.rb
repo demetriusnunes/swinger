@@ -15,6 +15,6 @@ def menu(path)
   end
 end
 
-When /^I click the menu "([^\"]*)"$/ do |path|
+When t(/^I click the menu "([^\"]*)"$/) do |path|
   menu(path).push
 end

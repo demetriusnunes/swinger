@@ -6,14 +6,14 @@ def togglebutton(button)
   JToggleButtonOperator.new(@container, id)
 end
 
-Given /^the toolbar button "([^\"]*)" is selected$/ do |button|
+Given t(/^the toolbar button "([^\"]*)" is selected$/) do |button|
   togglebutton(button).do_click
 end
 
-When /^I click the toolbar button "([^\"]*)"$/ do |button|
+When t(/^I click the toolbar button "([^\"]*)"$/) do |button|
   togglebutton(button).do_click
 end
 
-Then /^the toolbar button "([^\"]*)" should be selected$/ do |button|
+Then t(/^the toolbar button "([^\"]*)" should be selected$/) do |button|
   togglebutton(button).selected?.should be_true
 end

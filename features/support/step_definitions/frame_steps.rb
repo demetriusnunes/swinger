@@ -10,20 +10,20 @@ def frame(name, internal)
   end
 end
 
-Given /^the (internal )*frame "([^\"]*)" is visible$/ do |internal, name|
+Given t(/^the (internal )*frame "([^\"]*)" is visible$/) do |internal, name|
   frame(name, internal)
 end
 
-Given /^the frame "([^\"]*)" is a container$/ do |name|
+Given t(/^the frame "([^\"]*)" is a container$/) do |name|
   @container = JFrameOperator.new(name)
 end
 
-When /^I activate the (internal )*frame "([^\"]*)"$/ do |internal, name|
+When t(/^I activate the (internal )*frame "([^\"]*)"$/) do |internal, name|
   # not so safe, but JInternalFrameDriver#activate is broken on the Mac
   frame(name, internal).click_mouse
 end
 
-Then /^the (internal )*frame "([^\"]*)" should be active$/ do |internal, name|
+Then t(/^the (internal )*frame "([^\"]*)" should be active$/) do |internal, name|
   frame_operator = frame(name, internal)
   method = internal ? :selected : :active
   frame_operator.send("#{method}?").should be_true

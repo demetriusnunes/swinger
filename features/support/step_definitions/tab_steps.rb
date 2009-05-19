@@ -6,14 +6,14 @@ def tab(name, container = @container)
   [ tab, operator ]
 end
 
-Given /^the tab "([^\"]*)" is a container$/ do |name|
+Given t(/^the tab "([^\"]*)" is a container$/) do |name|
   @container = tab(name).last
 end
 
-When /^I select the tab "([^\"]*)"$/ do |name|
+When t(/^I select the tab "([^\"]*)"$/) do |name|
   tab(name)
 end
 
-Then /^the tab "([^\"]*)" should be selected$/ do |name|
+Then t(/^the tab "([^\"]*)" should be selected$/) do |name|
   tab(name).first.showing?.should be_true
 end
