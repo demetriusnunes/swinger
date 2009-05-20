@@ -1,8 +1,7 @@
 import org.netbeans.jemmy.operators.JDialogOperator
 
 def dialog(name)
-  dialog = JDialogOperator.findJDialog(name, false, false)
-  JDialogOperator.new(dialog) if dialog
+  JDialogOperator.new(name)
 end
 
 Given t(/^the dialog "([^\"]*)" is visible$/) do |name|
@@ -15,7 +14,9 @@ end
 
 Then t(/^I should (not )*see the dialog "([^\"]*)"$/) do |negation, name|
   if negation
-    dialog(name).should be_nil
+    expect_timeout(:id => "DialogWaiter.WaitDialogTimeout") do
+      dialog(name)
+    end
   else
     dialog(name).visible?.should be_true
   end

@@ -29,6 +29,26 @@ def string_or_numeric_id(id)
   id[0,1] == "#" ? id[1..-1].to_i : id
 end
 
+import org.netbeans.jemmy.Timeouts
+import org.netbeans.jemmy.TimeoutExpiredException
+def timeout(name, value, &block)
+  value ||= @timeout || 100
+  if block
+    old_timeout = Timeouts.get_default(name)
+    Timeouts.set_default(name, value)
+    block.call
+    Timeouts.set_default(name, old_timeout)
+  else
+    Timeouts.set_default(name, value)
+  end
+end
+
+def expect_timeout(options = {}, &block)
+  timeout(options[:id], options[:time]) do
+    block.should raise_error(TimeoutExpiredException) 
+  end
+end
+
 # step definition translation function
 def t(regex)
   if $steps_i18n && match = $steps_i18n[regex.source]

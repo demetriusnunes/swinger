@@ -4,11 +4,9 @@ import org.netbeans.jemmy.operators.JInternalFrameOperator
 def frame(name, internal = nil)
   if internal 
     check_container "Internal frame"
-    frame = JInternalFrameOperator.findJInternalFrame(@container.source, name, false, false)
-    JInternalFrameOperator.new(frame) if frame
+    JInternalFrameOperator.new(@container, name)
   else
-    frame = JFrameOperator.findJFrame(name, false, false)
-    JFrameOperator.new(frame) if frame
+    JFrameOperator.new(name)
   end
 end
 
@@ -33,7 +31,10 @@ end
 
 Then t(/^I should (not )*see the (internal )*frame "([^\"]*)"$/) do |negation, internal, name|
   if negation
-    frame(name, internal).should be_nil
+    timeout_id = internal ? "ComponentOperator.WaitComponentTimeout" : "FrameWaiter.WaitFrameTimeout"
+    expect_timeout(:id => timeout_id) do
+      frame(name, internal)
+    end
   else
     frame(name, internal).visible?.should be_true
   end
