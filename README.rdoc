@@ -37,12 +37,12 @@ To run all features, just type:
 * Menus
 * Textboxes
 * Dialogs
+* Radio buttons
+* Check boxes
  
 == TO DO
 
 * File Choosers
-* Radio buttons
-* Check boxes
 * Comboboxes
 * Lists
 * Progress bars
