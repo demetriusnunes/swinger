@@ -36,10 +36,10 @@ To run all features, just type:
 * Toolbar Buttons
 * Menus
 * Textboxes
+* Dialogs
  
 == TO DO
 
-* Dialogs
 * File Choosers
 * Radio buttons
 * Check boxes
