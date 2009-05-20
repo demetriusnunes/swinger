@@ -4,9 +4,11 @@ import org.netbeans.jemmy.operators.JInternalFrameOperator
 def frame(name, internal = nil)
   if internal 
     check_container "Internal frame"
-    JInternalFrameOperator.new(@container, name)
+    frame = JInternalFrameOperator.findJInternalFrame(@container.source, name, false, false)
+    JInternalFrameOperator.new(frame) if frame
   else
-    JFrameOperator.new(name)
+    frame = JFrameOperator.findJFrame(name, false, false)
+    JFrameOperator.new(frame) if frame
   end
 end
 
@@ -28,3 +30,16 @@ Then t(/^the (internal )*frame "([^\"]*)" should be active$/) do |internal, name
   method = internal ? :selected : :active
   frame_operator.send("#{method}?").should be_true
 end 
+
+Then t(/^I should (not )*see the (internal )*frame "([^\"]*)"$/) do |negation, internal, name|
+  if negation
+    frame(name, internal).should be_nil
+  else
+    frame(name, internal).visible?.should be_true
+  end
+end
+
+When t(/^I close the (internal )*frame "([^\"]*)"$/) do |internal, name|
+  # not so safe, but JInternalFrameDriver#activate is broken on the Mac
+  frame(name, internal).close
+end
