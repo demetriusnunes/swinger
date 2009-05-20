@@ -31,7 +31,8 @@ end
 
 import org.netbeans.jemmy.Timeouts
 import org.netbeans.jemmy.TimeoutExpiredException
-def timeout(name, value, &block)
+def timeout(name = nil, value = nil, &block)
+  name ||= name || "ComponentOperator.WaitComponentTimeout"
   value ||= @timeout || 100
   if block
     old_timeout = Timeouts.get_default(name)

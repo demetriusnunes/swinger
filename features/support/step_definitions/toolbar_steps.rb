@@ -20,17 +20,13 @@ class ButtonByTooltipFinder
 end
 
 def togglebutton(button, container = @container)
-  check_container "Toolbar button"
+  check_container "Toolbar button" unless container
   id = string_or_numeric_id(button)
-
-  if id.is_a?(String)
-    btn = JToggleButtonOperator.findJToggleButton(@container.source, id, false, false, 0)
-  else
-    btn = @container.class.findComponent(@container.source, JToggleButtonOperator::JToggleButtonFinder.new, id)
-  end
-  tooltip_finder = ButtonByTooltipFinder.new(id)
-  btn ||= JToggleButtonOperator.findJToggleButton(@container.source, tooltip_finder)
-  btn ? JToggleButtonOperator.new(btn) : nil
+  operator = nil
+  timeout { operator = JToggleButtonOperator.new(container, id) }
+  operator
+rescue TimeoutExpiredException
+  JToggleButtonOperator.new(@container, ButtonByTooltipFinder.new(id))
 end
 
 Given t(/^the toolbar button "([^\"]*)" is selected$/) do |button|

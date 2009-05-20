@@ -1,19 +1,20 @@
 import org.netbeans.jemmy.operators.JTabbedPaneOperator
 
-def tab(name, container = @container)
+def tab(id, container = @container)
+  check_container "TabbedPane" unless container
   operator = JTabbedPaneOperator.new(container)
-  tab = operator.select_page(string_or_numeric_id(name))
-  [ tab, operator ]
+  operator.wait_page(string_or_numeric_id(id))
+  operator
 end
 
 Given t(/^the tab "([^\"]*)" is a container$/) do |name|
-  @container = tab(name).last
+  @container = tab(name)
 end
 
 When t(/^I select the tab "([^\"]*)"$/) do |name|
-  tab(name)
+  tab(name).select_page(string_or_numeric_id(name))
 end
 
 Then t(/^the tab "([^\"]*)" should be selected$/) do |name|
-  tab(name).first.showing?.should be_true
+  tab(name).wait_selected(string_or_numeric_id(name))
 end

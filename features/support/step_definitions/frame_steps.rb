@@ -31,7 +31,7 @@ end
 
 Then t(/^I should (not )*see the (internal )*frame "([^\"]*)"$/) do |negation, internal, name|
   if negation
-    timeout_id = internal ? "ComponentOperator.WaitComponentTimeout" : "FrameWaiter.WaitFrameTimeout"
+    timeout_id = internal ? nil : "FrameWaiter.WaitFrameTimeout"
     expect_timeout(:id => timeout_id) do
       frame(name, internal)
     end
