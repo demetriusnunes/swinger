@@ -2,7 +2,7 @@ Feature: Checkbox locators and events
 
   Background:
     Given the frame "SwingSet" is the container
-      And the toolbar button "#1" is selected
+      And the toolbar button "#2" is selected
       And the tab "Button Demo" is the container
     When I select the tab "Check Boxes"
     Given the tab "Check Boxes" is the container
@@ -25,9 +25,9 @@ Feature: Checkbox locators and events
     Then the checkbox "#<checkbox>" should not be selected
     Examples:
       | checkbox |
-      | 0 |
       | 1 |
       | 2 |
       | 3 |
       | 4 |
       | 5 |
+      | 6 |

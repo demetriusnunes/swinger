@@ -2,7 +2,7 @@ Feature: Radio Buttons locators and events
 
   Background:
     Given the frame "SwingSet" is the container
-      And the toolbar button "#1" is selected
+      And the toolbar button "#2" is selected
       And the tab "Button Demo" is the container
     When I select the tab "Radio Buttons"
     Given the tab "Radio Buttons" is the container
@@ -23,9 +23,9 @@ Feature: Radio Buttons locators and events
     Then the radio button "#<button>" should be selected
     Examples:
       | button |
-      | 0 |
       | 1 |
       | 2 |
       | 3 |
       | 4 |
       | 5 |
+      | 6 |

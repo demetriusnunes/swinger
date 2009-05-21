@@ -11,5 +11,5 @@ Funcionalidade: Textfield locators and events
     Given the frame "SwingSet" is the container
     And the toolbar button "JInternalFrame demo" is selected
     And the tab "Internal Frames Demo" is the container
-    When I fill the field "#0" with "My Frame Title 2"
-    Then the field "#0" should be "My Frame Title 2"
+    When I fill the field "#1" with "My Frame Title 2"
+    Then the field "#1" should be "My Frame Title 2"

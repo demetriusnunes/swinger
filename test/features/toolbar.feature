@@ -6,7 +6,6 @@ Feature: Toolbar button locators and events
     Then the toolbar button "#<button>" should be selected
   Examples:
     | button |
-    | 0 |
     | 1 |
     | 2 |
     | 3 |
@@ -22,6 +21,7 @@ Feature: Toolbar button locators and events
     | 13 |
     | 14 |
     | 15 |    
+    | 16 |    
     
   Scenario: Toolbar button click by tooltip
     Given the frame "SwingSet" is the container
