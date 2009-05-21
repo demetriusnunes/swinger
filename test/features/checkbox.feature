@@ -1,11 +1,11 @@
 Feature: Checkbox locators and events
 
   Background:
-    Given the frame "SwingSet" is a container
+    Given the frame "SwingSet" is the container
       And the toolbar button "#1" is selected
-      And the tab "Button Demo" is a container
+      And the tab "Button Demo" is the container
     When I select the tab "Check Boxes"
-    Given the tab "Check Boxes" is a container
+    Given the tab "Check Boxes" is the container
   
   Scenario Outline: Checkbox clicking with names
     When I click the checkbox "<checkbox>"

@@ -14,7 +14,7 @@ Given t(/^the (internal )*frame "([^\"]*)" is visible$/) do |internal, name|
   frame(name, internal)
 end
 
-Given t(/^the frame "([^\"]*)" is a container$/) do |name|
+Given t(/^the frame "([^\"]*)" is the container$/) do |name|
   @container = JFrameOperator.new(name)
 end
 

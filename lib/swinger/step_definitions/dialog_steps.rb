@@ -8,7 +8,7 @@ Given t(/^the dialog "([^\"]*)" is visible$/) do |name|
   dialog(name)  
 end
 
-Given t(/^the dialog "([^\"]*)" is a container$/) do |name|
+Given t(/^the dialog "([^\"]*)" is the container$/) do |name|
   @container = dialog(name)  
 end
 

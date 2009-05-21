@@ -7,7 +7,7 @@ def tab(id, container = @container)
   operator
 end
 
-Given t(/^the tab "([^\"]*)" is a container$/) do |name|
+Given t(/^the tab "([^\"]*)" is the container$/) do |name|
   @container = tab(name)
 end
 

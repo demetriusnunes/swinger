@@ -1,5 +1,5 @@
 "pt":
   '^I click the button "([^\"]*)"$': '^eu clicar no botão "([^\"]*)"$'
-  '^the frame "([^\"]*)" is a container$': '^que a tela "([^\"]*)" é o container$'
+  '^the frame "([^\"]*)" is the container$': '^que a tela "([^\"]*)" é o container$'
   '^the toolbar button "([^\"]*)" is selected$': '^que o botão de toolbar "([^\"]*)" está selecionado$'
-  '^the tab "([^\"]*)" is a container$': '^que a aba "([^\"]*)" é o container$'
+  '^the tab "([^\"]*)" is the container$': '^que a aba "([^\"]*)" é o container$'
