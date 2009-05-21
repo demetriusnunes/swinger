@@ -1,1 +1,0 @@
-java -cp lib\jemmy.jar;lib\SwingSet2.jar org.netbeans.jemmy.explorer.GUIBrowser SwingSet2
