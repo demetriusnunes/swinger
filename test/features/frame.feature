@@ -4,7 +4,7 @@ Feature: Frame locators and events
     Given the frame "SwingSet" is visible
     When I activate the frame "SwingSet"
     Then the frame "SwingSet" should be active
-    
+
   Scenario Outline: Internal frame activation
     Given the frame "SwingSet" is a container
       And the toolbar button "JInternalFrame demo" is selected

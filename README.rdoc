@@ -18,9 +18,9 @@ Here is an acceptance test example using these steps:
 
 == Running
 
-To run all features, just type:
+To run all features on the test app, just type:
 
- jruby -S cucumber features
+ jruby -S cucumber test/features
  
 == Requirements
 

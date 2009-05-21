@@ -19,8 +19,8 @@ Given t(/^the frame "([^\"]*)" is a container$/) do |name|
 end
 
 When t(/^I activate the (internal )*frame "([^\"]*)"$/) do |internal, name|
-  # not so safe, but JInternalFrameDriver#activate is broken on the Mac
-  frame(name, internal).click_mouse
+  method = internal ? [ :set_selected, true ] : [ :activate ]
+  frame(name, internal).send(*method)
 end
 
 Then t(/^the (internal )*frame "([^\"]*)" should be active$/) do |internal, name|
@@ -41,6 +41,5 @@ Then t(/^I should (not )*see the (internal )*frame "([^\"]*)"$/) do |negation, i
 end
 
 When t(/^I close the (internal )*frame "([^\"]*)"$/) do |internal, name|
-  # not so safe, but JInternalFrameDriver#activate is broken on the Mac
-  frame(name, internal).close
+  frame(name, internal).set_closed(true)
 end
