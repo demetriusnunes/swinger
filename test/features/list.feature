@@ -4,9 +4,9 @@ Feature: List
     Given the frame "SwingSet" is the container
       And the toolbar button "JList demo" is selected
       And the tab "List Demo" is the container
-    When I change the list "#1" to "TeraSystems"
-      Then I should have the list "#1" with "TeraSystems"
-    When I change the list "#1" to "YoYoTech"
-      Then I should have the list "#1" with "YoYoTech"
-    When I change the list "#1" to "#2"
-      Then I should have the list "#1" with "MetaDynamics"
+    When I select "TeraSystems" in the list "#1"
+      Then I should have the list "#1" with "TeraSystems" selected
+    When I select "YoYoTech" in the list "#1"
+      Then I should have the list "#1" with "YoYoTech" selected
+    When I select "#2" in the list "#1"
+      Then I should have the list "#1" with "MetaDynamics" selected

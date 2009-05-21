@@ -5,11 +5,11 @@ def list(id, container = @container)
   JListOperator.new(container, string_or_numeric_id(id))
 end
 
-When t(/^I change the list "([^\"]*)" to "([^\"]*)"$/) do |id, value|
+When t(/^I select "([^\"]*)" in the list "([^\"]*)"$/) do |value, id|
   value_id = string_or_numeric_id(value)
   list(id).select_item(value_id)
 end
 
-Then t(/^I should have the list "([^\"]*)" with "([^\"]*)"$/) do |id, value|
+Then t(/^I should have the list "([^\"]*)" with "([^\"]*)" selected$/) do |id, value|
   list(id).selected_value.should == value
 end
