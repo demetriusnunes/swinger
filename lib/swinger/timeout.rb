@@ -4,6 +4,10 @@ import org.netbeans.jemmy.TimeoutExpiredException
 module Swinger 
   module Timeout
     
+    def set_default_timeout(value)
+      @timeout = value
+    end
+    
     def timeout(name = nil, value = nil, &block)
       name ||= name || "ComponentOperator.WaitComponentTimeout"
       value ||= @timeout || 100

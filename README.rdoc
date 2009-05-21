@@ -42,11 +42,11 @@ To run all features on the test app, just type:
 * Dialogs
 * Radio buttons
 * Check boxes
+* Comboboxes
  
 == TO DO
 
 * File Choosers
-* Comboboxes
 * Lists
 * Progress bars
 * Sliders
