@@ -10,3 +10,5 @@ Feature: Combobox
       Then I should have the combobox "#3" with "Jon"
     When I change the combobox "#4" to "Jon"
       Then I should have the combobox "#4" with "Jon"
+    When I change the combobox "#4" to "#1"
+      Then I should have the combobox "#4" with "Brent"
