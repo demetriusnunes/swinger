@@ -33,7 +33,7 @@ For only a specific feature:
 
  jruby -S rake ONLY=combobox
 
-For running the test applicatiom:
+For running the test application:
 
  jruby -S rake test_app
 
