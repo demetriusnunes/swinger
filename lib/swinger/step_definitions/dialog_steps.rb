@@ -1,4 +1,4 @@
-import org.netbeans.jemmy.operators.JDialogOperator
+java_import org.netbeans.jemmy.operators.JDialogOperator
 
 def dialog(name)
   JDialogOperator.new(name)

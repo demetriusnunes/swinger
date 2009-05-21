@@ -1,5 +1,5 @@
-import org.netbeans.jemmy.Timeouts
-import org.netbeans.jemmy.TimeoutExpiredException
+java_import org.netbeans.jemmy.Timeouts
+java_import org.netbeans.jemmy.TimeoutExpiredException
 
 module Swinger 
   module Timeout

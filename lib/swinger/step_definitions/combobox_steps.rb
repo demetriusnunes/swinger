@@ -1,5 +1,5 @@
-import org.netbeans.jemmy.operators.JComboBoxOperator
-import org.netbeans.jemmy.operators.Operator
+java_import org.netbeans.jemmy.operators.JComboBoxOperator
+java_import org.netbeans.jemmy.operators.Operator
 
 def combobox(id, container = @container)
   check_container("ComboBox") unless container

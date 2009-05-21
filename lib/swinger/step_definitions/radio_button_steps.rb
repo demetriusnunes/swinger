@@ -1,4 +1,4 @@
-import org.netbeans.jemmy.operators.JRadioButtonOperator
+java_import org.netbeans.jemmy.operators.JRadioButtonOperator
 
 def radio_button(id, container = @container)
   check_container("Radio Button") unless container

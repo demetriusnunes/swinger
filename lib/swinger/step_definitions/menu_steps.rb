@@ -1,6 +1,6 @@
-import org.netbeans.jemmy.operators.JMenuBarOperator
-import org.netbeans.jemmy.operators.JMenuOperator
-import org.netbeans.jemmy.operators.JMenuItemOperator
+java_import org.netbeans.jemmy.operators.JMenuBarOperator
+java_import org.netbeans.jemmy.operators.JMenuOperator
+java_import org.netbeans.jemmy.operators.JMenuItemOperator
 
 def menu(path)
   check_container "Menu"

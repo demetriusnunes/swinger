@@ -1,4 +1,4 @@
-import org.netbeans.jemmy.operators.JListOperator
+java_import org.netbeans.jemmy.operators.JListOperator
 
 def list(id, container = @container)
   check_container("List") unless container

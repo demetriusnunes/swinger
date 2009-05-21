@@ -1,5 +1,5 @@
-import org.netbeans.jemmy.operators.JFrameOperator
-import org.netbeans.jemmy.operators.JInternalFrameOperator
+java_import org.netbeans.jemmy.operators.JFrameOperator
+java_import org.netbeans.jemmy.operators.JInternalFrameOperator
 
 def frame(name, internal = nil)
   if internal 

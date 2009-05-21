@@ -1,6 +1,6 @@
-import org.netbeans.jemmy.operators.JToggleButtonOperator
-import org.netbeans.jemmy.ComponentChooser
-import javax.swing.JToggleButton
+java_import org.netbeans.jemmy.operators.JToggleButtonOperator
+java_import org.netbeans.jemmy.ComponentChooser
+java_import javax.swing.JToggleButton
 
 class ButtonByTooltipFinder
   include ComponentChooser

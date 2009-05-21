@@ -1,4 +1,4 @@
-import org.netbeans.jemmy.operators.JButtonOperator
+java_import org.netbeans.jemmy.operators.JButtonOperator
 
 def button(id, container = @container)
   check_container("Button") unless container

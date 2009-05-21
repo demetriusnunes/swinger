@@ -1,5 +1,5 @@
-import org.netbeans.jemmy.operators.JTextFieldOperator
-import org.netbeans.jemmy.operators.JPasswordFieldOperator
+java_import org.netbeans.jemmy.operators.JTextFieldOperator
+java_import org.netbeans.jemmy.operators.JPasswordFieldOperator
 
 def text_field(id, container = @container)
   JTextFieldOperator.new(container, string_or_numeric_id(id))

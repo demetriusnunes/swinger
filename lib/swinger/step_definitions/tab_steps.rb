@@ -1,4 +1,4 @@
-import org.netbeans.jemmy.operators.JTabbedPaneOperator
+java_import org.netbeans.jemmy.operators.JTabbedPaneOperator
 
 def tab(id, container = @container)
   check_container "TabbedPane" unless container

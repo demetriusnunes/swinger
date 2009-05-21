@@ -1,4 +1,4 @@
-import org.netbeans.jemmy.operators.JCheckBoxOperator
+java_import org.netbeans.jemmy.operators.JCheckBoxOperator
 
 def checkbox(id, container = @container)
   check_container("Checkbox") unless container

@@ -24,7 +24,19 @@ Here is an acceptance test example using these steps:
 To run all features on the test app, just type:
 
  jruby -S cucumber test/features
- 
+
+Or, if you have Rake (which you should!), just go with:
+
+ jruby -S rake
+
+For only a specific feature:
+
+ jruby -S rake ONLY=combobox
+
+For running the test applicatiom:
+
+ jruby -S rake test_app
+
 == Requirements
 
 * Latest JRuby version (I'm running from 1.3 source)
