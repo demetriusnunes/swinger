@@ -55,11 +55,11 @@ For running the test applicatiom:
 * Radio buttons
 * Check boxes
 * Comboboxes
+* Lists
  
 == TO DO
 
 * File Choosers
-* Lists
 * Progress bars
 * Sliders
 * Tables
