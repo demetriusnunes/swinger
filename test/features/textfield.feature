@@ -1,4 +1,4 @@
-Funcionalidade: Textfield locators and events
+Feature: Textfield locators and events
 
   Scenario: Textfield filling
     Given the frame "SwingSet" is the container
