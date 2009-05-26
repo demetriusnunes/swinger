@@ -1,9 +1,14 @@
-java_import org.netbeans.jemmy.operators.JCheckBoxOperator
+module Swinger
+  module Checkbox
+    java_import org.netbeans.jemmy.operators.JCheckBoxOperator
 
-def checkbox(id, container = @container)
-  check_container("Checkbox") unless container
-  JCheckBoxOperator.new(container, string_or_numeric_id(id))
+    def checkbox(id, container = @container)
+      check_container("Checkbox") unless container
+      JCheckBoxOperator.new(container, string_or_numeric_id(id))
+    end
+  end
 end
+World(Swinger::Checkbox)
 
 When t(/^I click the checkbox "([^\"]*)"$/) do |name|
   checkbox(name).do_click

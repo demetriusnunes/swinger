@@ -1,13 +1,18 @@
-java_import org.netbeans.jemmy.operators.JTextFieldOperator
-java_import org.netbeans.jemmy.operators.JPasswordFieldOperator
+module Swinger
+  module TextField
+    java_import org.netbeans.jemmy.operators.JTextFieldOperator
+    java_import org.netbeans.jemmy.operators.JPasswordFieldOperator
 
-def text_field(id, container = @container)
-  JTextFieldOperator.new(container, string_or_numeric_id(id))
-end
+    def text_field(id, container = @container)
+      JTextFieldOperator.new(container, string_or_numeric_id(id))
+    end
 
-def password_field(id, container = @container)
-  JPasswordFieldOperator.new(container, string_or_numeric_id(id))
+    def password_field(id, container = @container)
+      JPasswordFieldOperator.new(container, string_or_numeric_id(id))
+    end
+  end
 end
+World(Swinger::TextField)
 
 When t(/^I fill the field "([^\"]*)" with "([^\"]*)"$/) do |name, text|
   text_field(name).text = text

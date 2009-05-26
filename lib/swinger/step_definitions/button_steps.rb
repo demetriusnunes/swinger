@@ -1,9 +1,14 @@
-java_import org.netbeans.jemmy.operators.JButtonOperator
+module Swinger
+  module Button
+    java_import org.netbeans.jemmy.operators.JButtonOperator
 
-def button(id, container = @container)
-  check_container("Button") unless container
-  JButtonOperator.new(container, string_or_numeric_id(id))
+    def button(id, container = @container)
+      check_container("Button") unless container
+      JButtonOperator.new(container, string_or_numeric_id(id))
+    end
+  end
 end
+World(Swinger::Button)
 
 When t(/^I click the button "([^\"]*)"$/) do |name|
   button(name).do_click

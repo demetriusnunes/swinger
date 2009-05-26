@@ -1,8 +1,13 @@
-java_import org.netbeans.jemmy.operators.JDialogOperator
+module Swinger
+  module Dialog
+    java_import org.netbeans.jemmy.operators.JDialogOperator
 
-def dialog(name)
-  JDialogOperator.new(name)
+    def dialog(name)
+      JDialogOperator.new(name)
+    end
+  end
 end
+World(Swinger::Dialog)
 
 Given t(/^the dialog "([^\"]*)" is visible$/) do |name|
   dialog(name)  

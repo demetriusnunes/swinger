@@ -1,9 +1,9 @@
-java_import org.netbeans.jemmy.Timeouts
 java_import org.netbeans.jemmy.TimeoutExpiredException
 
-module Swinger 
+module Swinger
   module Timeout
-    
+    java_import org.netbeans.jemmy.Timeouts
+
     def set_default_timeout(value)
       @timeout = value
     end
