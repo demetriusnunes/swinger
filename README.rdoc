@@ -6,7 +6,7 @@ I am using the Jemmy Netbeans library for driving the application.
 
 As a target application I am using the SwingSet2 demo.
 
-Take a look at features/support/step_definitions for the steps available so far.
+Take a look at lib/swinger/step_definitions for the steps available so far.
 
 Here is an acceptance test example using these steps:
 
