@@ -3,6 +3,8 @@ require File.expand_path(path + '/../../../lib/swinger')
 
 require File.expand_path(path + '/../../SwingSet2.jar')
 
+puts "It takes a while for the scenarios to begin executing, so please be patient..."
+
 Java::SwingSet2.main([].to_java(:string))
 sleep(1)
 
