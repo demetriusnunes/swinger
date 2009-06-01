@@ -1,25 +1,6 @@
 module Swinger
   module Toolbar
     java_import org.netbeans.jemmy.operators.JToggleButtonOperator
-    java_import org.netbeans.jemmy.ComponentChooser
-    java_import javax.swing.JToggleButton
-
-    class ButtonByTooltipFinder
-      include ComponentChooser
-
-      def initialize(tooltip)
-        @tooltip = tooltip
-        self
-      end
-
-      def getDescription
-        "button with tooltip '#{@tooltip}'"
-      end
-
-      def checkComponent(comp)
-        comp.tool_tip_text == @tooltip
-      end
-    end
 
     def togglebutton(button, container = @container)
       check_container "Toolbar button" unless container
@@ -28,7 +9,7 @@ module Swinger
       timeout { operator = JToggleButtonOperator.new(container, id) }
       operator
     rescue TimeoutExpiredException
-      JToggleButtonOperator.new(@container, ButtonByTooltipFinder.new(id))
+      JToggleButtonOperator.new(@container, Swinger::Button::ButtonByTooltipFinder.new(id))
     end
   end
 end
