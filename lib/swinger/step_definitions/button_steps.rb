@@ -37,3 +37,7 @@ World(Swinger::Button)
 When t(/^I click the button "([^\"]*)"$/) do |name|
   button(name).do_click
 end
+
+When t(/^I click the button "([^\"]*)" no block$/) do |name|
+  button(name).push_no_block
+end
