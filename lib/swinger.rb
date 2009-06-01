@@ -11,8 +11,8 @@ require 'swinger/i18n'
 require 'swinger/utils'
 require 'swinger/timeout'
 
-import org.netbeans.jemmy.JemmyProperties
-import org.netbeans.jemmy.TestOut
+java_import org.netbeans.jemmy.JemmyProperties
+java_import org.netbeans.jemmy.TestOut
 
 JemmyProperties::set_current_output(TestOut.null_output) unless ENV['DEBUG']
 
