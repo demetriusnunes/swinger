@@ -1,3 +1,6 @@
+java_import org.netbeans.jemmy.operators.ComponentOperator
+java_import org.netbeans.jemmy.operators.ContainerOperator
+
 module Swinger
   module Utils
 
