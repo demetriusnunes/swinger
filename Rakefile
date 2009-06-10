@@ -8,11 +8,15 @@ Cucumber::Rake::Task.new(:features, 'Run all features on the test application') 
   else
     t.cucumber_opts = "test/features --format pretty"
   end
+  if ENV['RCOV']
+    t.rcov = true
+    t.rcov_opts = "--include test/features"
+  end
 end
 
 desc 'Run test application'
 task :test_app do
-  `#{ENV['_STARTJAVA']} -jar test/SwingSet2.jar`
+  `java -jar test/SwingSet2.jar`
 end
 
 desc 'List all step definitions'
