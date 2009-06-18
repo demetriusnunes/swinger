@@ -19,7 +19,7 @@ Here is an acceptance test example using these steps:
     When I click the button "OK"
     Then I should not see the dialog "About Swing!"
 
-== Running
+== Running the tests
 
 To run all features on the test app, just type:
 
@@ -37,10 +37,25 @@ For running the test application:
 
  jruby -S rake test_app
 
+== Using Swinger in your project
+
+Since Swinger is in active development at this points, there is no stable gem
+available, so you will have to use Swinger from the source.
+
+To do so, just clone the project with:
+
+ git://github.com/demetriusnunes/swinger.git
+
+Or better yet, fork it and clone it from your own repo, so you can contribute!
+ 
+And within your project, require it in your features/support/env.rb
+
+ require '/path/to/swinger/lib/swinger'
+ 
 == Requirements
 
-* Latest JRuby version (I'm running from 1.3 source)
-* Latest Cucumber (0.3.6)
+* Latest JRuby version 
+* Latest Cucumber 
 * Java 1.5 or above
 
 == DONE (all partial implementations)
@@ -56,11 +71,11 @@ For running the test application:
 * Check boxes
 * Comboboxes
 * Lists
+* Tables
+* Trees
  
 == TO DO
 
 * File Choosers
 * Progress bars
 * Sliders
-* Tables
-* Trees
