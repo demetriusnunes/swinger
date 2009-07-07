@@ -36,6 +36,7 @@ Then /^the field "([^\"]*)" should be "([^\"]*)"$/ do |name, text|
   text_field(name).text.should == text
 end
 
-Then /^the text field named "([^\"]*)" should be "([^\"]*)"$/ do |name, text|
+Then /^the text field named "([^\"]*)" should contain "([^\"]*)"$/ do |name, text|
   text_field_named(name).text.should == text
 end
+
