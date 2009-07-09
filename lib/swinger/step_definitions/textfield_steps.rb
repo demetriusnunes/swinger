@@ -8,8 +8,8 @@ module Swinger
       JTextFieldOperator.new(container, string_or_numeric_id(id))
     end
 
-    def text_field_named name, container = @container
-      JTextFieldOperator.new container, NameComponentChooser.new( name )
+    def text_field_named(name, container = @container)
+      JTextFieldOperator.new(container, NameComponentChooser.new( name ))
     end
 
     def password_field(id, container = @container)
