@@ -32,11 +32,6 @@ When t(/^I fill the password field "([^\"]*)" with "([^\"]*)"$/) do |name, text|
   password_field(name).text = text
 end
 
-Then /^the field "([^\"]*)" should be "([^\"]*)"$/ do |name, text|
-  text_field(name).text.should == text
-end
-
-Then /^the text field named "([^\"]*)" should contain "([^\"]*)"$/ do |name, text|
+Then t(/^the text field named "([^\"]*)" should contain "([^\"]*)"$/) do |name, text|
   text_field_named(name).text.should == text
 end
-
