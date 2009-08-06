@@ -16,7 +16,7 @@ class ComponentFinderByVariableName
     
   def check_component(comp)
     op = ComponentOperator.new(comp)
-    win = @container || op.window
+    win = @container ? @container.source : op.window
     field = win.java_class.declared_field(@name)
     field.accessible = true
     field_obj = field.value(win)

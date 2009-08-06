@@ -10,7 +10,18 @@ module Swinger
     end
 
     def string_or_numeric_id(id)
-      id[0,1] == "#" ? id[1..-1].to_i - 1 : id
+      selector, value = id[0,1], id[1..-1]
+      
+      case selector
+        when "#":
+          value.to_i - 1
+        when "%"
+          NameComponentChooser.new(value, @container)
+        when "@":
+          ComponentFinderByVariableName.new(value, @container)
+        else
+          id
+      end
     end
     
   end
