@@ -1,6 +1,7 @@
 java_import org.netbeans.jemmy.util.NameComponentChooser
 java_import org.netbeans.jemmy.operators.ComponentOperator
 java_import org.netbeans.jemmy.operators.ContainerOperator
+java_import org.netbeans.jemmy.operators.WindowOperator
 
 module Swinger
   module Utils
@@ -10,6 +11,8 @@ module Swinger
     end
 
     def string_or_numeric_id(id)
+      return id unless id.is_a?(String)
+      
       selector, value = id[0,1], id[1..-1]
       
       case selector

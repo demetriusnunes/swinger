@@ -11,7 +11,8 @@
 
   '^the dialog "([^\"]*)" is visible$': '^que o diálogo "([^\"]*)" é visível$'
   '^the dialog "([^\"]*)" is the container$': '^que o diálogo "([^\"]*)" é o container$'
-  
+  '^I should (not )*see the dialog "([^\"]*)"$': '^eu (não )*devo ver o diálogo "([^\"]*)"$'
+    
   '^the toolbar button "([^\"]*)" is selected$': '^que o botão de toolbar "([^\"]*)" está selecionado$'
 
   '^the tab "([^\"]*)" is the container$': '^que a aba "([^\"]*)" é o container$'
