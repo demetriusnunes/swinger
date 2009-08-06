@@ -17,6 +17,18 @@ end
 
 World(Swinger::TextField)
 
+Given t(/^the text field "([^\"]*)" is filled with "([^\"]*)"$/) do |name, value|
+  text_field(name).text.should == value
+end
+
+Given t(/^the text field "([^\"]*)" is (not )*enabled$/) do |name, negation|
+  text_field(name).enabled?.send(negation ? :should_not : :should) == true
+end
+
+Given t(/^the text field "([^\"]*)" is (not )*empty$/) do |name, negation|
+  text_field(name).text.empty?.send(negation ? :should_not : :should) == true
+end
+
 When t(/^I fill the text field "([^\"]*)" with "([^\"]*)"$/) do |name, text|
   text_field(name).text = text
 end

@@ -41,3 +41,7 @@ end
 When t(/^I click the button "([^\"]*)" no block$/) do |name|
   button(name).push_no_block
 end
+
+Given t(/^the button "([^\"]*)" is enabled$/) do |name|
+  button(name).enabled?.should == true
+end

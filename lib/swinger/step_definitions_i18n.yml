@@ -1,5 +1,19 @@
 "pt":
   '^I click the button "([^\"]*)"$': '^eu clicar no botão "([^\"]*)"$'
+  '^the button "([^\"]*)" is enabled$': '^que o botão "([^\"]*)" está habilitado$'
+
+  '^the text field "([^\"]*)" is filled with "([^\"]*)"$': '^que o campo "([^\"]*)" está preenchido com "([^\"]*)"$'
+  '^the text field "([^\"]*)" is (not )*enabled$': '^que o campo "([^\"]*)" (não )*está habilitado$'
+  '^the text field "([^\"]*)" is (not )*empty$': '^que o campo "([^\"]*)" (não )*está vazio$'
+
   '^the frame "([^\"]*)" is the container$': '^que a tela "([^\"]*)" é o container$'
+  '^the (internal )*frame "([^\"]*)" is visible$': '^que a tela (interna )*"([^\"]*)" é visível$'
+
+  '^the dialog "([^\"]*)" is visible$': '^que o diálogo "([^\"]*)" é visível$'
+  '^the dialog "([^\"]*)" is the container$': '^que o diálogo "([^\"]*)" é o container$'
+  
   '^the toolbar button "([^\"]*)" is selected$': '^que o botão de toolbar "([^\"]*)" está selecionado$'
+
   '^the tab "([^\"]*)" is the container$': '^que a aba "([^\"]*)" é o container$'
+
+  '^the radio button "([^\"]*)" is (not )*selected$': '^que o radio button "([^\"]*)" (não )*está selecionado$'
