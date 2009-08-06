@@ -6,7 +6,7 @@ module Swinger
     def frame(name, internal = nil)
       if internal
         check_container "Internal frame"
-        JInternalFrameOperator.new(@container, name)
+        JInternalFrameOperator.new(@container, string_or_numeric_id(name))
       else
         JFrameOperator.new(name)
       end
@@ -19,8 +19,8 @@ Given t(/^the (internal )*frame "([^\"]*)" is visible$/) do |internal, name|
   frame(name, internal)
 end
 
-Given t(/^the frame "([^\"]*)" is the container$/) do |name|
-  @container = frame(name)
+Given t(/^the (internal )*frame "([^\"]*)" is the container$/) do |internal, name|
+  @container = frame(name, internal)
 end
 
 When t(/^I activate the (internal )*frame "([^\"]*)"$/) do |internal, name|

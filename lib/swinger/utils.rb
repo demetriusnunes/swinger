@@ -1,3 +1,4 @@
+java_import org.netbeans.jemmy.util.NameComponentChooser
 java_import org.netbeans.jemmy.operators.ComponentOperator
 java_import org.netbeans.jemmy.operators.ContainerOperator
 
