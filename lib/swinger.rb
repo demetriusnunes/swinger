@@ -10,6 +10,7 @@ require 'swinger/jemmy.jar'
 require 'swinger/i18n'
 require 'swinger/utils'
 require 'swinger/timeout'
+require 'swinger/component_finder_by_variable_name'
 
 java_import org.netbeans.jemmy.JemmyProperties
 java_import org.netbeans.jemmy.TestOut
