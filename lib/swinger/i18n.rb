@@ -10,5 +10,5 @@ end
 path = SWINGER_ROOT + '/swinger/step_definitions_i18n.yml'
 if File.exist?(path)
   $steps_i18n = YAML.load_file(path)
-  $steps_i18n = $steps_i18n[Cucumber.lang]
+  $steps_i18n = $steps_i18n[(Cucumber::Cli::Main.step_mother.options[:lang] rescue Cucumber.lang)]
 end
