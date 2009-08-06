@@ -3,8 +3,8 @@ module Swinger
     java_import org.netbeans.jemmy.operators.JLabelOperator
 
     def label(id, container = @container, named = false)
-      named ? JLabelOperator.new(container, NameComponentChooser.new(id)) : 
-              JLabelOperator.new(container, string_or_numeric_id(id))
+      JLabelOperator.new(container, named ? NameComponentChooser.new(id) : 
+                                            string_or_numeric_id(id))
     end
   end
 end
