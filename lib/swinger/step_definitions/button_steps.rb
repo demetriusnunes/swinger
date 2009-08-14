@@ -45,3 +45,7 @@ end
 Given t(/^the button "([^\"]*)" is enabled$/) do |name|
   button(name).enabled?.should == true
 end
+
+Then t(/^the button "([^\"]*)" should (not )*be enabled$/) do |name, negation|
+  button(name).enabled?.should == !negation
+end

@@ -25,6 +25,14 @@ Given t(/^the text field "([^\"]*)" is (not )*enabled$/) do |name, negation|
   text_field(name).enabled?.send(negation ? :should_not : :should) == true
 end
 
+Then t(/^the text field "([^\"]*)" should (not )*be enabled$/) do |name, negation|
+  text_field(name).enabled?.send(negation ? :should_not : :should) == true
+end
+
+Then t(/^the text field "([^\"]*)" should (not )*be empty$/) do |name, negation|
+  text_field(name).text.empty?.should == !negation
+end
+
 Given t(/^the text field "([^\"]*)" is (not )*empty$/) do |name, negation|
   text_field(name).text.empty?.send(negation ? :should_not : :should) == true
 end
