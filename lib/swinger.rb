@@ -20,4 +20,7 @@ JemmyProperties::set_current_output(TestOut.null_output) unless ENV['DEBUG']
 World(Swinger::Utils)
 World(Swinger::Timeout)
 
+lang = Cucumber::Cli::Main.step_mother.options[:lang] rescue Cucumber.lang
+I18N.load(lang)
+
 Dir["#{SWINGER_ROOT}/swinger/step_definitions/*.rb"].each { |sd| require sd }

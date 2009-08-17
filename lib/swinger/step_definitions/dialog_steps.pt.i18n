@@ -1,0 +1,11 @@
+^the dialog "([^\"]*)" is visible$
+^que o diálogo "([^\"]*)" é visível$
+
+^the dialog "([^\"]*)" is the container$
+^que o diálogo "([^\"]*)" é o container$
+
+^I should (not )*see the dialog "([^\"]*)"$
+^eu (não )*devo ver o diálogo "([^\"]*)"$
+
+^I close the dialog "([^\"]*)"$
+^Eu fecho o diálogo "([^\"]*)"$

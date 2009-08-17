@@ -1,0 +1,5 @@
+^I select all in the table$
+^eu seleciono tudo na tabela$
+
+^I should (not )*see "([^\"]*)" in the table$
+^eu (não )*devo ver "([^\"]*)" na tabela$

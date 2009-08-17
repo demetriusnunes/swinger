@@ -1,0 +1,8 @@
+^the radio button "([^\"]*)" is (not )*selected$
+^que o radio button "([^\"]*)" (não )*está selecionado$
+
+^I click the radio button "([^\"]*)"$
+^eu clicar o radio button "([^\"]*)"$
+
+^the radio button "([^\"]*)" should (not )*be selected$
+^o radio button "([^\"]*)" (não )*deve estar selecionado$

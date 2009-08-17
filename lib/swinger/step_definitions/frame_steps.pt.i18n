@@ -1,0 +1,17 @@
+^the (internal )*frame "([^\"]*)" is the container$
+^que a tela (interna )*"([^\"]*)" é o container$
+
+^the (internal )*frame "([^\"]*)" is visible$
+^que a tela (interna )*"([^\"]*)" é visível$
+
+^I activate the (internal )*frame "([^\"]*)"$
+^eu ativo a janela (interna )*"([^\"]*)"$
+
+^I close the (internal )*frame "([^\"]*)"$
+^eu fecho a janela (interna )*"([^\"]*)"$
+
+^I should (not )*see the (internal )*frame "([^\"]*)"$
+^eu (não )*devo ver a janela (interna )*"([^\"]*)"$
+
+^the (internal )*frame "([^\"]*)" should be active$
+^a janela (interna )*"([^\"]*)" deve estar ativa$

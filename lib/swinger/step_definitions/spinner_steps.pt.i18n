@@ -1,0 +1,5 @@
+^I change the spinner "([^\"]*)" to (\d+)$
+^eu mudo o spinner "([^\"]*)" para (\d+)$
+
+^the spinner "([^\"]*)" should (not )*be (\d+)$
+^o spinner "([^\"]*)" (não )* deve ser (\d+)$

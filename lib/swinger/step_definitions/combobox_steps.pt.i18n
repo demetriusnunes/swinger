@@ -1,0 +1,5 @@
+^I change the combobox "([^\"]*)" to "([^\"]*)"$
+^Eu mudo o combobox "([^\"]*)" para "([^\"]*)"$
+
+^I should have the combobox "([^\"]*)" with "([^\"]*)"$
+^Eu devo ter o combobox "([^\"]*)" com "([^\"]*)"$

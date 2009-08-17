@@ -1,0 +1,5 @@
+^I click the checkbox "([^\"]*)"$
+^eu clico no checkbox "([^\"]*)"$
+
+^the checkbox "([^\"]*)" should (not )*be selected$
+^o checkbox "([^\"]*)" (não )*deve estar selecionado$

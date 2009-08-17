@@ -1,0 +1,8 @@
+^I have the label "([^\"]*)"$
+^eu tenho o label "([^\"]*)"$
+
+^I set the label "([^\"]*)" to "([^\"]*)"$
+^eu altero o label "([^\"]*)" com "([^\"]*)"$
+
+^the label "([^\"]*)" should be "([^\"]*)"$
+^o label "([^\"]*)" deve ser "([^\"]*)"$

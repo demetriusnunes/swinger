@@ -1,0 +1,8 @@
+^the tab "([^\"]*)" is the container$
+^que a aba "([^\"]*)" é o container$
+
+^I select the tab "([^\"]*)"$
+^eu seleciono o tab "([^\"]*)"$
+
+^the tab "([^\"]*)" should be selected$
+^o tab "([^\"]*)" deve estar selecionado$

@@ -1,0 +1,23 @@
+^the text field "([^\"]*)" is filled with "([^\"]*)"$
+^que o campo "([^\"]*)" está preenchido com "([^\"]*)"$'
+
+^the text field "([^\"]*)" is (not )*enabled$
+^que o campo "([^\"]*)" (não )*está habilitado$
+
+^the text field "([^\"]*)" is (not )*empty$
+^que o campo "([^\"]*)" (não )*está vazio$
+
+^the text field "([^\"]*)" should (not )*be enabled$
+^o campo "([^\"]*)" (não )*deve estar habilitado$
+
+^the text field "([^\"]*)" should (not )*be empty$
+^o campo "([^\"]*)" (não )*deve estar vazio$
+
+^I fill the text field "([^\"]*)" with "([^\"]*)"$
+^eu preencher o campo "([^\"]*)" com "([^\"]*)"$
+
+^I fill the password field "([^\"]*)" with "([^\"]*)"$
+^eu preencher o campo de senha "([^\"]*)" com "([^\"]*)"$
+
+^the text field "([^\"]*)" should (be|contain) "([^\"]*)"$
+^o campo "([^\"]*)" deve (ser|conter) "([^\"]*)"$

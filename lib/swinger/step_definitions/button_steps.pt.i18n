@@ -1,0 +1,11 @@
+^I click the button "([^\"]*)"$
+^eu clicar no botão "([^\"]*)"$
+
+^I click the button "([^\"]*)" no block$
+^eu clicar no botão "([^\"]*)" sem bloqueio$
+
+^the button "([^\"]*)" is enabled$
+^que o botão "([^\"]*)" está habilitado$
+
+^the button "([^\"]*)" should (not )*be enabled$
+^o botão "([^\"]*)" (não )*deve estar habilitado$
