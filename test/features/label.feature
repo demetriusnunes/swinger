@@ -6,4 +6,4 @@ Feature: Label manipulation
     And the internal frame "#1" is the container
     Given I have the label "Frame title:"
     When I set the label "Frame title:" to "Window Title:"
-    Then the label "#1" should be "Window Title:"
+    Then the label "#4" should be "Window Title:"
