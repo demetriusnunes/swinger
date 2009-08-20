@@ -1,8 +1,8 @@
 ^the (internal )*frame "([^\"]*)" is the container$
-^que a tela (interna )*"([^\"]*)" é o container$
+^que a janela (interna )*"([^\"]*)" é o container$
 
 ^the (internal )*frame "([^\"]*)" is visible$
-^que a tela (interna )*"([^\"]*)" é visível$
+^que a janela (interna )*"([^\"]*)" é visível$
 
 ^I activate the (internal )*frame "([^\"]*)"$
 ^eu ativo a janela (interna )*"([^\"]*)"$
