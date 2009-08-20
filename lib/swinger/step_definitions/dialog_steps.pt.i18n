@@ -8,4 +8,4 @@
 ^eu (não )*devo ver o diálogo "([^\"]*)"$
 
 ^I close the dialog "([^\"]*)"$
-^Eu fecho o diálogo "([^\"]*)"$
+^eu fechar o diálogo "([^\"]*)"$

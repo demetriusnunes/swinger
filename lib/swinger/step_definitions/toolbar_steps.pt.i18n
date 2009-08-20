@@ -2,7 +2,7 @@
 ^que o botão de toolbar "([^\"]*)" está selecionado$
 
 ^I click the toolbar button "([^\"]*)"$
-^eu clico no botão de toolbar "([^\"]*)"$
+^eu clicar no botão de toolbar "([^\"]*)"$
 
 ^the toolbar button "([^\"]*)" should be selected$
 ^o botão de toolbar "([^\"]*)" deve estar selecionado$

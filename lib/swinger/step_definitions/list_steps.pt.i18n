@@ -1,5 +1,5 @@
 ^I select "([^\"]*)" in the list "([^\"]*)"$
-^eu seleciono "([^\"]*)" na lista "([^\"]*)"$
+^eu selecionar "([^\"]*)" na lista "([^\"]*)"$
 
 ^I should have the list "([^\"]*)" with "([^\"]*)" selected$
 ^eu devo ter a lista "([^\"]*)" com "([^\"]*)" selecionado$

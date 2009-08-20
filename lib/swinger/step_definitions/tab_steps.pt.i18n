@@ -2,7 +2,7 @@
 ^que a aba "([^\"]*)" é o container$
 
 ^I select the tab "([^\"]*)"$
-^eu seleciono o tab "([^\"]*)"$
+^eu selecionar a aba "([^\"]*)"$
 
 ^the tab "([^\"]*)" should be selected$
-^o tab "([^\"]*)" deve estar selecionado$
+^a aba "([^\"]*)" deve estar selecionado$
