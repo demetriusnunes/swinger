@@ -5,12 +5,14 @@ module Swinger
 
     def text_field(id, container = @container)
       check_container("Text field") unless container
-      JTextFieldOperator.new(container, string_or_numeric_id(id))
+      find_by_label(id, container, JTextFieldOperator) || 
+        JTextFieldOperator.new(container, string_or_numeric_id(id))
     end
 
     def password_field(id, container = @container)
       check_container("Password field") unless container
-      JPasswordFieldOperator.new(container, string_or_numeric_id(id))
+      find_by_label(id, container, JPasswordFieldOperator) || 
+        JPasswordFieldOperator.new(container, string_or_numeric_id(id))
     end
   end
 end

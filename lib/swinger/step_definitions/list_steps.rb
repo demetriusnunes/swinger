@@ -4,7 +4,8 @@ module Swinger
 
     def list(id, container = @container)
       check_container("List") unless container
-      JListOperator.new(container, string_or_numeric_id(id))
+      find_by_label(id, container, JListOperator) ||
+        JListOperator.new(container, string_or_numeric_id(id))
     end
   end
 end

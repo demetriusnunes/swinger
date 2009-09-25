@@ -5,7 +5,8 @@ module Swinger
 
     def combobox(id, container = @container)
       check_container("ComboBox") unless container
-      JComboBoxOperator.new(container, string_or_numeric_id(id))
+      find_by_label(id, container, JComboBoxOperator) ||
+        JComboBoxOperator.new(container, string_or_numeric_id(id))
     end
 
     def combobox_select(id, value, container = @container)

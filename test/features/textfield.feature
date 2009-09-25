@@ -13,3 +13,11 @@ Feature: Textfield locators and events
     And the tab "Internal Frames Demo" is the container
     When I fill the text field "#1" with "My Frame Title 2"
     Then the text field "#1" should be "My Frame Title 2"
+ 
+# Not passing because we need to modify SwingSet2 source  
+#  Scenario: Textfield by label
+#    Given the frame "SwingSet" is the container
+#    And the toolbar button "JInternalFrame demo" is selected
+#    And the tab "Internal Frames Demo" is the container
+#    When I fill the text field "Frame title:" with "My Frame Title 2"
+#    Then the text field "Frame title:" should be "My Frame Title 2"
