@@ -6,7 +6,7 @@ Cucumber::Rake::Task.new(:features, 'Run all features on the test application') 
   if feature = ENV['ONLY']
     t.cucumber_opts = "test/features/#{feature}.feature"
   else
-    t.cucumber_opts = "test/features --format pretty"
+    t.cucumber_opts = "test/features --format progress"
   end
   if ENV['RCOV']
     t.rcov = true
