@@ -1,26 +1,9 @@
-module Swinger
-  module Frame
-    java_import org.netbeans.jemmy.operators.JFrameOperator
-    java_import org.netbeans.jemmy.operators.JInternalFrameOperator
-
-    def frame(name, internal = nil)
-      if internal
-        check_container "Internal frame"
-        JInternalFrameOperator.new(@container, string_or_numeric_id(name))
-      else
-        JFrameOperator.new(name)
-      end
-    end
-  end
-end
-World(Swinger::Frame)
-
 Given t(/^the (internal )*frame "([^\"]*)" is visible$/) do |internal, name|
   frame(name, internal)
 end
 
 Given t(/^the (internal )*frame "([^\"]*)" is the container$/) do |internal, name|
-  @container = frame(name, internal)
+  container.set frame(name, internal)
 end
 
 When t(/^I activate the (internal )*frame "([^\"]*)"$/) do |internal, name|

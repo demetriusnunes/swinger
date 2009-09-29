@@ -1,16 +1,3 @@
-module Swinger
-  module Label
-    java_import org.netbeans.jemmy.operators.JLabelOperator
-
-    def label(id, container = @container)
-      check_container("Label") unless container
-      JLabelOperator.new(container, string_or_numeric_id(id))
-    end
-  end
-end
-
-World(Swinger::Label)
-
 Given t(/^I have the label "([^\"]*)"$/) do |name|
   label(name)
 end

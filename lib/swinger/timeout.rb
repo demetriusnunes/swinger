@@ -29,3 +29,5 @@ module Swinger
     
   end
 end
+
+World(Swinger::Timeout)

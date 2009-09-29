@@ -1,20 +1,9 @@
-module Swinger
-  module Dialog
-    java_import org.netbeans.jemmy.operators.JDialogOperator
-
-    def dialog(name, container = @container)
-      container ? JDialogOperator.new(container, name) : JDialogOperator.new(name)
-    end
-  end
-end
-World(Swinger::Dialog)
-
 Given t(/^the dialog "([^\"]*)" is visible$/) do |name|
   dialog(name)  
 end
 
 Given t(/^the dialog "([^\"]*)" is the container$/) do |name|
-  @container = dialog(name)  
+  container.set dialog(name)
 end
 
 Then t(/^I should (not )*see the dialog "([^\"]*)"$/) do |negation, name|

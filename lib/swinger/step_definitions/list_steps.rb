@@ -1,16 +1,3 @@
-module Swinger
-  module List
-    java_import org.netbeans.jemmy.operators.JListOperator
-
-    def list(id, container = @container)
-      check_container("List") unless container
-      find_by_label(id, container, JListOperator) ||
-        JListOperator.new(container, string_or_numeric_id(id))
-    end
-  end
-end
-World(Swinger::List)
-
 When t(/^I select "([^\"]*)" in the list "([^\"]*)"$/) do |value, id|
   value_id = string_or_numeric_id(value)
   operator = list(id)
