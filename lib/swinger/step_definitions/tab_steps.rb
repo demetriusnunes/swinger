@@ -1,3 +1,7 @@
+Given t(/^the tab "([^\"]*)" is visible$/) do |name|
+  container.set tab(name)
+end
+
 Given t(/^the tab "([^\"]*)" is the container$/) do |name|
   container.set tab(name)
 end

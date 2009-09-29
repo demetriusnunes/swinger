@@ -1,5 +1,5 @@
 Given t(/^the (internal )*frame "([^\"]*)" is visible$/) do |internal, name|
-  frame(name, internal)
+  container.set frame(name, internal)
 end
 
 Given t(/^the (internal )*frame "([^\"]*)" is the container$/) do |internal, name|
@@ -8,7 +8,8 @@ end
 
 When t(/^I activate the (internal )*frame "([^\"]*)"$/) do |internal, name|
   method = internal ? [ :set_selected, true ] : [ :activate ]
-  frame(name, internal).send(*method)
+  frame = frame(name, internal)
+  frame.send(*method)
 end
 
 Then t(/^the (internal )*frame "([^\"]*)" should be active$/) do |internal, name|

@@ -1,5 +1,5 @@
 Given t(/^the dialog "([^\"]*)" is visible$/) do |name|
-  dialog(name)  
+  container.set dialog(name)
 end
 
 Given t(/^the dialog "([^\"]*)" is the container$/) do |name|

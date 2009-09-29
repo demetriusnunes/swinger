@@ -6,9 +6,8 @@ Feature: Frame locators and events
     Then the frame "SwingSet" should be active
 
   Scenario Outline: Internal frame activation
-    Given the frame "SwingSet" is the container
+    Given the frame "SwingSet" is visible
       And the toolbar button "JInternalFrame demo" is selected
-      And the internal frame "<frame>" is visible
     When I activate the internal frame "<frame>"
     Then the internal frame "<frame>" should be active
   Examples:
@@ -20,9 +19,8 @@ Feature: Frame locators and events
     | Frame 4 |
     
   Scenario Outline: Internal frame manipulation
-    Given the frame "SwingSet" is the container
+    Given the frame "SwingSet" is visible
       And the toolbar button "JInternalFrame demo" is selected
-    And the internal frame "<frame>" is visible
     When I activate the internal frame "<frame>"
     Then I should see the internal frame "<frame>"
     When I close the internal frame "<frame>"
