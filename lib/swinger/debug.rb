@@ -22,3 +22,14 @@ module IRB # :nodoc:
     end
   end
 end
+
+module Debugger
+  def self.start_session(binding)
+    # tries to use ruby-debug first
+    require 'ruby-debug'
+    debugger
+    "Debugger started: type 'help' to see available commands."
+  rescue
+    IRB.start_session(binding)
+  end
+end
