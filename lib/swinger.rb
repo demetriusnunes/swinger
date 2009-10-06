@@ -12,7 +12,7 @@ require 'swinger/identifier'
 require 'swinger/timeout'
 require 'swinger/component_finder_by_variable_name'
 require 'swinger/container'
-require 'swinger/console'
+require 'swinger/debug'
 
 java_import org.netbeans.jemmy.JemmyProperties
 java_import org.netbeans.jemmy.TestOut
