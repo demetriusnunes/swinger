@@ -4,6 +4,7 @@ Feature: Buttons locators and events
     Given the frame "SwingSet" is visible
       And the toolbar button "#2" is selected
       And the tab "Button Demo" is visible
+      And the tab "Buttons" is selected
     When I click the button "One"
     When I click the button "Two"
     When I click the button "Three!"
@@ -12,6 +13,7 @@ Feature: Buttons locators and events
     Given the frame "SwingSet" is visible
       And the toolbar button "#2" is selected
       And the tab "Button Demo" is visible
+      And the tab "Buttons" is selected
     When I click the button "#<button>"
     Examples:
       | button |

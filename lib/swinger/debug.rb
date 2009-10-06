@@ -29,7 +29,7 @@ module Debugger
     require 'ruby-debug'
     debugger
     "Debugger started: type 'help' to see available commands."
-  rescue
+  rescue LoadError
     IRB.start_session(binding)
   end
 end
