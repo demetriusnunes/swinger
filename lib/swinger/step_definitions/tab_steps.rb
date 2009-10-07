@@ -2,6 +2,11 @@ Given t(/^the tab "([^\"]*)" is visible$/) do |name|
   container.set tab(name)
 end
 
+Given t(/^the tab "([^\"]*)" is selected$/) do |name|
+  container.set tab(name)
+  container.get.select_page(string_or_numeric_id(name))
+end
+
 Given t(/^the tab "([^\"]*)" is the container$/) do |name|
   container.set tab(name)
 end

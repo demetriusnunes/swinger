@@ -27,7 +27,7 @@ module Swinger
       timeout { operator = JButtonOperator.new(container, id) }
       operator
     rescue TimeoutExpiredException
-      JButtonOperator.new(container.current, ButtonByTooltipFinder.new(id))
+      JButtonOperator.new(container, ButtonByTooltipFinder.new(id))
     end
 
   end
