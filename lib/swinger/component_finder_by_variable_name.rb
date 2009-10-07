@@ -1,4 +1,5 @@
 java_import org.netbeans.jemmy.ComponentChooser
+java_import org.netbeans.jemmy.operators.ComponentOperator
 
 # This class uses tries to use internal variable names to find components
 # declared within a window class (even if it's private) thru reflection

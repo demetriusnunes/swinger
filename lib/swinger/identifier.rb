@@ -12,10 +12,8 @@ module Swinger
         when "#":
           value.to_i - 1
         when "%"
-          container.current.check!
           NameComponentChooser.new(value, container.current)
         when "@":
-          container.current.check!
           ComponentFinderByVariableName.new(value, container.current)
         else
           id

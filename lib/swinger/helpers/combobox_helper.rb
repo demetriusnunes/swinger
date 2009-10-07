@@ -4,7 +4,7 @@ module Swinger
     java_import org.netbeans.jemmy.operators.Operator
 
     def combobox(id, container = container.current)
-      container_check! "ComboBox"
+      container_check! container, "ComboBox"
       find_by_label(id, container, JComboBoxOperator) ||
         JComboBoxOperator.new(container, string_or_numeric_id(id))
     end
