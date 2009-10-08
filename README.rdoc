@@ -55,7 +55,8 @@ And within your project, require it in your features/support/env.rb
 == Requirements
 
 * Latest JRuby version 
-* Latest Cucumber 
+* Latest Cucumber, Rake and RSpec gems - Install with:
+ jruby -S gem install cucumber rake rspec) 
 * Java 1.5 or above
 
 == DONE (all partial implementations)
