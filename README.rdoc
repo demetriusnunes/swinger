@@ -12,10 +12,9 @@ Here is an acceptance test example using these steps:
 
   Scenario: Dialog manipulation
     Given the frame "SwingSet" is visible
-      And the frame "SwingSet" is the container
     When I click the menu "File/About"
     Then I should see the dialog "About Swing!"
-    Given the dialog "About Swing!" is the container
+    Given the dialog "About Swing!" is visible 
     When I click the button "OK"
     Then I should not see the dialog "About Swing!"
 
@@ -56,7 +55,7 @@ And within your project, require it in your features/support/env.rb
 
 * Latest JRuby version 
 * Latest Cucumber, Rake and RSpec gems - Install with:
- jruby -S gem install cucumber rake rspec) 
+ jruby -S gem install cucumber rake rspec 
 * Java 1.5 or above
 
 == DONE (all partial implementations)
